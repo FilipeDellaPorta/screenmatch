@@ -23,8 +23,9 @@ public class MainLists {
         listaDeTitulos.add(lost);
         for (Titulo titulo: listaDeTitulos) {
             System.out.println(titulo.getNome());
-            Filme filme = (Filme) titulo;
-            System.out.println("Classificação: " + filme.getClassificacao());
+            if (titulo instanceof Filme filme) {
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
         }
     }
 }
